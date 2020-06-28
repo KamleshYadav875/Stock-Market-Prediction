@@ -1,0 +1,55 @@
+
+{% extends 'prediction/basic.html' %}
+{% load static %}
+
+{% block body %}
+{% include 'prediction/slider.html' %}
+<div class="container mt-4 text-center">
+	<marquee>This website is only for education purpose we are not responsible for any lose.</marquee>
+	<h2 class="text-secondary"> WELCOME TO STOCK MARKET PREDICTION AND FORCATING SYSTEM</h2>
+	<div class="row mt-3 center">
+		<div class="col-lg-4 col-m-12">
+			<div class="card" >
+			  <img src="{% static 'images/card1.jpg' %}" class="card-img-top" alt="...">
+			  <div class="card-body">
+			  	<h5>Admin Management System</h5>
+			    <p class="card-text">In this project we are having admin section for adding company and token which is used by the customer for prediction.</prediction></p>
+			  </div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-12">
+			<div class="card" >
+			  <img src="{% static 'images/card2.jpg' %}" class="card-img-top" alt="...">
+			  <div class="card-body">
+			  	<h5>Database Management System</h5>
+			    <p class="card-text">Database contain two table one for login and second for company details like name and token which is used for prediction.</p>
+			  </div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-12">
+			<div class="card" >
+			  <img src="{% static 'images/card3.jpg' %}" class="card-img-top" alt="...">
+			  <div class="card-body">
+			  	<h5>Stock Management System</h5>
+			    <p class="card-text">Reading historical data from pandas_datareader of past 3 year. Based on the trand of the company model will predit the next 10 days trand.</p>
+			  </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="ccontainer mt-5" style="background-color: #f8f5c2">
+	<div class="container pt-3">
+		<div class="row ">
+			<div class="col-lg-6 col-md-12">
+				<img src="{% static 'images/slider-img-1.jpg' %}" width="100%">
+			</div>
+			<div class="col-lg-6 col-md-12">
+				<h4> ABOUT STOCK MARKET PREDICTION AND FORCASTING SYSTEM</h4>
+				<hr>
+				<p>Stock market cycles are the long-term price patterns of stock markets and are often associated with general business cycles. They are key to technical analysis where the approach to investing is based on cycles or repeating price patterns. If we have better understanding toward the cycles of stock market, we can always buy with relative low-price and sell at relative high price in each cycle, and we’ll always have positive return. What a wonderful world! Of course, there is no superior strategy in stock market which can make money forever, but fbprophet package in Python or R can help us look deeper into the hidden cycles in stock market. In this analysis, we can take a look at how fbprophet can assist us to make an investment decision.</p> 
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock body %}

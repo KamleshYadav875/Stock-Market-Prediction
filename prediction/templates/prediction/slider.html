@@ -1,0 +1,62 @@
+
+{% load static %}
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    	<div class="row">
+    		<div class="col-lg-6 col-s-12">
+      			<img src="{% static 'images/4.png' %}" class="d-block flex-justify-center float-right w-100" alt="...">
+      		</div>
+      		<div class="col-lg-6 col-s-0">
+      			<div class="carousel-caption d-none d-md-block float-left">
+      				<h1>LATEST TECHNOLOTY AND INFRASTRUCTURE USED</h1>
+			        <p>Latest infrastrucure and technology</p>
+			        <a class="btn btn-outline-info" href="{% url 'about' %}">Read More</a>
+			    </div>
+			</div>
+		</div>
+    </div>
+    <div class="carousel-item ">
+    	<div class="row">
+    		
+      		<div class="col-lg-6 col-s-0">
+      			<div class="carousel-caption d-none d-md-block float-left">
+			        
+			        <h1>MANAGE THE STOCK DEAILS</h1>
+			        <p>A complete solution of stock</p>
+			    </div>
+			</div>
+			<div class="col-lg-6 col-s-12">
+      			<img src="{% static 'images/2.png' %}" class="d-block flex-justify-center float-right w-100" alt="...">
+      		</div>
+		</div>
+    </div>
+    <div class="carousel-item ">
+    	<div class="row">
+    		<div class="col-lg-6 col-s-12">
+      			<img src="{% static 'images/2.png' %}" class="d-block flex-justify-center float-right w-100" alt="...">
+      		</div>
+      		<div class="col-lg-6 col-s-0">
+      			<div class="carousel-caption d-none d-md-block float-left">
+			        <h1>FILES AND USER MANAGEMENT</h1>
+			        <p>Management of stock and files</p>
+			    </div>
+			</div>
+		</div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+

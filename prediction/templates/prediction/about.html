@@ -1,0 +1,73 @@
+{% extends 'prediction/basic.html' %}
+{% load static %}
+
+{% block body %}
+<style>
+    .about .row
+    {
+        width: 100%;
+        display: block;
+        box-shadow: 2px 2px 2px 2px #658745;
+        margin: 10px;
+    }
+</style>
+<div class="container about">
+    <marquee>This website is only for education purpose we are not responsible for any lose.</marquee>
+    <div class="row">
+        <div class="col-lg-12 ">
+            <h3 class="text-center">About the project</h3>
+            <p class="p-3">Stock market cycles are the long-term price patterns of stock markets and are often associated with general business cycles. They are key to technical analysis where the approach to investing is based on cycles or repeating price patterns. If we have better understanding toward the cycles of stock market, we can always buy with relative low-price and sell at relative high price in each cycle, and we’ll always have positive return. What a wonderful world! Of course, there is no superior strategy in stock market which can make money forever, but fbprophet package in Python or R can help us look deeper into the hidden cycles in stock market. In this analysis, we can take a look at how fbprophet can assist us to make an investment decision.</p>
+            <hr>
+            <p class="p-3">In this project we are using fbprophet prediction model to predict upcoming 10 days stock price by analysis of past 3 years historical data.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 ">
+            <h3 class="text-center">Technology used</h3>
+            <p>A web based product using machine learning models to predict future stock values based on the historical values.</p>
+            
+            <p>
+                <ol>
+                    <li>Python(3.8.0) for backend</li><br>
+                    <li>Django(3.0.5) framework for integration of frontend and backend</li><br>
+                    <li>JavaScript frame work with CSS and HTML for front end</li><br>
+                    <li>Chat.js for plotting</li><br>
+                    <li>fbprophet 0.6 for prediction</li><br>
+                </ol>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 ">
+            <h3 class="text-center">Machine learning models used:</h3>
+            <p class="p-3">
+                Fbprophet is an open source released by Facebook in order to provide some useful guidance for producing forecast at scale. By default, it would divide a time series into trend and seasonality, which might contain yearly, weekly and daily. However, analysts can define their own seasonality. To get better understanding about the package, the document from Prophet is really helpful.
+One of the feature for package is its simplicity and flexibility. Since cycles in stock market we want to figure out are not limited to yearly, weekly or daily, we should define our own cycles and find out which can fit the data better. Besides, we should not use weekly seasonality since there is no trading on weekend. We can also define our ‘self_define_cycle’ by add_seasonality function. All the settings can be done with only two lines of code.
+            </p>
+        </div>
+    </div>
+    <div class="row text-center" style="display:flex">
+        <div class="col-lg-12"><h3 class="text-center mx-auto">Team details</h3></div>
+        
+        <div class="col-lg-4 col-md-3 col-sm-12" >
+            <p class="p-3">
+                <img src="{% static 'images/kamlesh yadav.jpg' %}" width="200px" style="border-radius: 50%; border:1px solid black;"/>
+                <h5>Kamlesh yadav <a href="https://kamleshyadav875.github.io/Kamlesh-Yadav/" >(Profile)</a></h5>
+            </p>
+        </div>
+        <div class="col-lg-4 col-md-3 col-sm-12">
+            <p class="p-3">
+                <img src="{% static 'images/abhi.jpg' %}" width="200px" style="border-radius: 50%; border:1px solid black;"/>
+                <h5>Abhishek Choubey </h5>
+            </p>
+        </div>
+        <div class="col-lg-4 col-md-3 col-sm-12">
+            <p class="p-3">
+                <img src="{% static 'images/tiwari.jpeg' %}" width="200px" style="border-radius: 50%; border:1px solid black;"/>
+                <h5>Adarsh Tiwari </h5>
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

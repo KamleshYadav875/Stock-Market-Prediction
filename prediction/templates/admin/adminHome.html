@@ -1,0 +1,92 @@
+{% extends 'admin/basic.html' %}
+{% block body %}
+<style type="text/css">
+	#dashboard .row div
+	{
+		height: 150px;
+		width:150px;
+		background-color:  rgba(3,27,39,1)!important;
+		color: white;
+		
+	}
+	#dashboard .row div:hover
+	{
+		background-color:  rgba(0,2,3,1)!important;
+		color: white;
+	}
+	
+</style>
+
+<div class="container mt-3" id="dashboard">
+	<h2 class="text-center"> Dashboard</h2>
+
+	<div class="row center  d-flex justify-content-center">
+		
+		<div class="col-lg-2 col-md-4 shadow m-2 text-center align-middle pt-5 border rounded">
+			<a class="btn btn-lg text-white" href="{% url 'addtoken'%}">Add Token</a>
+		</div>
+	
+		<div class="col-lg-2 col-md-4 shadow m-2 text-center align-middle pt-5 border rounded">
+			<a class="btn btn-lg text-white" href="{% url 'viewdata'%}">View Data</a>
+		</div>
+		<div class="col-lg-2 col-md-4 shadow m-2 text-center align-middle pt-5 border rounded">
+			<a class="btn btn-lg text-white" href="{% url 'predict'%}">Predict</a>
+		</div>
+		<div class="col-lg-2 col-md-4 shadow m-2 text-center align-middle pt-5 border rounded-lg">
+			<a class="btn btn-lg text-white" href="">Setting</a>
+		</div>
+		
+	</div>
+
+</div>
+
+
+
+
+<!-- <div class="row mt-3">
+	<div class="col-lg-3"></div>
+
+	<div class="col-lg-6">
+		<form action="/predict/" method="post">{% csrf_token %}
+		    <div class="input-group mb-3">
+		        
+		        <select class="custom-select" id="inputGroupSelect01" name="comp">
+		            <option selected>Choose...</option>
+		            {% for token in tokens %}
+		            <option value="{{token.token}}">{{token.name}}</option>
+		            {% endfor %}
+		        </select>
+		    </div>
+		    <button class="btn btn-success btn-block" type="submit">Submit</button>
+		</form>
+
+		<canvas id="myChart"></canvas>
+	</div>
+
+	<div class="col-lg-3"></div>
+</div>
+
+ -->
+
+
+<!-- <script type="text/javascript">
+var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: {{x|safe}},
+        datasets: [{
+            label: "{{t}}",
+            borderColor: 'rgb(56,72,73)',
+            data: {{y|safe}}
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+</script> -->
+{% endblock body %}

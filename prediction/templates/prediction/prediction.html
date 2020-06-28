@@ -1,0 +1,75 @@
+{% extends 'prediction/basic.html' %}
+{% block body %}
+<div class="row mt-3">
+    <marquee>This website is only for education purpose we are not responsible for any lose.</marquee>
+	<div class="col-lg-3"></div>
+
+	<div class="col-lg-6">
+        <h1>Select company for prediction</h1>
+		<form action="/prediction/" method="post">{% csrf_token %}
+		    <div class="input-group mb-3">
+		        
+		        <select class="custom-select" id="inputGroupSelect01" name="comp">
+		            <option selected>Choose...</option>
+		            {% for token in tokens %}
+		            <option value="{{token.token}}">{{token.name}}</option>
+		            {% endfor %}
+		        </select>
+		    </div>
+		    <button class="btn btn-success btn-block" type="submit">Submit</button>
+		</form>
+        {% if x is not None %}
+            <canvas id="myChart"></canvas>
+            <h4 class="text-center">Historical Data</h4>
+            <canvas id="tenday"></canvas>
+            <h4 class="text-center">Next 10 days prediction</h4>
+        
+        {% endif %}
+	</div>
+
+	<div class="col-lg-3"></div>
+</div>
+
+
+<script type="text/javascript">
+var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: {{x|safe}},
+        datasets: [{
+            label: "{{t}}",
+            borderColor: 'rgb(56,72,73)',
+            data: {{y|safe}}
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+</script>
+<script type="text/javascript">
+var ctx = document.getElementById('tenday').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: {{n|safe}},
+        datasets: [{
+            label: "{{t}}",
+            borderColor: 'rgb(56,72,73)',
+            data: {{pre|safe}}
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+</script>
+
+{% endblock body %}
