@@ -4,7 +4,7 @@
 ![Home page](https://github.com/KamleshYadav875/Stock-Market-Prediction/blob/master/frontEnd/index.jpg "Home Page")
 ---
 
-## Preduction Page
+## Pridiction Page
 
 ![Home page](https://github.com/KamleshYadav875/Stock-Market-Prediction/blob/master/frontEnd/prediction.jpg " Prediction Page")
 
